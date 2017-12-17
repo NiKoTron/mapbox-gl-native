@@ -107,7 +107,7 @@ public:
         return *lhs.expression == *rhs.expression;
     }
 
-    std::shared_ptr<expression::Expression> getExpression() { return expression; }
+    const expression::Expression* getExpression() const { return expression.get(); }
     
     std::string property;
     Stops stops;
